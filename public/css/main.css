@@ -1,3 +1,80 @@
+@import url("/css/nav.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --darkBlue: #1B2A38;
+    --lightGreyWhite: #edf0f5;
+}
+
 body {
-    background-color: rgb(156, 156, 156);
+    background-color: var(--lightGreyWhite);
+}
+
+h1 {
+    padding: 0 !important;
+}
+
+li a {
+    color: var(--darkBlue);
+    text-decoration: none;
+    margin-bottom: 0.1rem;
+    padding: 5px 10px;
+}
+
+li a:hover {
+    background-color: #1B2A38;
+    color: var(--lightGreyWhite);
+}
+
+code {
+    color: var(--lightGreyWhite);
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    margin-right: 5%;
+}
+
+.main {
+    width: 75%;
+}
+
+.snippet_wrapper > * {
+    padding: 0;
+}
+
+.snippet_wrapper {
+    width: 100%;
+}
+
+.snippet_title {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.snippet_desc {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.codeSnippet {
+    background-color: var(--darkBlue);
+    color: var(--lightGreyWhite);
+    padding: 0.8rem;
+    border-radius: 6px;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+    white-space: nowrap;
 }

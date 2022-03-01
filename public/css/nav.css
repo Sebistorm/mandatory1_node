@@ -1,0 +1,39 @@
+ nav {
+    padding: 20px 20px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #1B2A38;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  nav .topnav {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    text-decoration: none !important;
+    color: unset !important;
+    font-weight: 600;
+  }
+  
+  nav .logoWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logoWrapper .fa-book {
+    font-size: 35px;
+    color: white !important;
+    margin-right: 0.8rem;
+  }
+
+  nav .logoWrapper p {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  /*
+  Navbar slut
+   */
