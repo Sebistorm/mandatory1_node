@@ -1,0 +1,22 @@
+{
+  "name": "mandatory_node",
+  "version": "1.0.0",
+  "description": "Mandatory 1 nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebistorm/mandatory1_node.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "SebiStorm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sebistorm/mandatory1_node/issues"
+  },
+  "homepage": "https://github.com/Sebistorm/mandatory1_node#readme"
+}
