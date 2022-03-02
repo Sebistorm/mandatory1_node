@@ -1,0 +1,72 @@
+<div class="main right">
+    <div class="row">
+        <h1>Mandatory 1 - Pure Data CRUDable REST API</h1>
+    </div>
+
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">Sending data in a GET request</h3>
+        <p class="snippet_desc"><code>path variables</code> and <code>query string</code> is used for sending data in a GET request</p>
+        <div class="codeSnippet overflow-x-scroll">
+            <code>//path variable</code>
+            <code>app.get("/aboutclient/:clientName", (req, res) => {</code>
+            <code class="indent">res.send({ greeting: `Hello there ${req.params.clientName}`});</code>
+            <code>});</code>
+
+            <code>//query string</code>
+            <code>app.get("/libraries", (req, res) => {</code>
+            <code class="indent">res.send(req.query);</code>
+            <code>});</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">get</h3>
+        <p class="snippet_desc"><code>get</code> sends data through the url. It is very important the data is not sensitive. This example shows how to find a movie by its id</p>
+        <div class="codeSnippet">
+            <code>app.get("/movies/:id", (req, res) => {</code>
+            <code class="indent">const foundMovie = movies.find(movie => movie.id === Number(req.params.id));</code>
+            <code class="indent">foundMovie ? res.send({ data: foundMovie }) : res.status(204).send({});</code>
+            <code>});</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">post</h3>
+        <p class="snippet_desc"><code>post</code> is used to send sensitive data to the server through the body</p>
+        <div class="codeSnippet">
+            <code>app.post("/movies", (req, res) => {</code>
+            <code class="indent">const movieToCreate = req.body;</code>
+            <code class="indent">movies.push(movieToCreate);</code>
+            <code class="indent">res.send({ data: movieToCreate });</code>
+            <code>});</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">patch</h3>
+        <p class="snippet_desc"><code>patch</code> is used to update data in the resource but is not idempotent like PUT. <code>The spread operator</code> is used to update resource with the new data </p>
+        <div class="codeSnippet">
+            <code>app.patch("/movies/:id", (req, res) => {</code>
+            <code class="indent">const foundMovieIndex = movies.findIndex(movie => movie.id === Number(req.params.id));</code>
+            <code class="indent">const foundMovie = movies[foundMovieIndex];</code>
+            <code class="indent">const movieToUpdateWith = { ...foundMovie, ...req.body, id: foundMovie.id };</code>
+            <code class="indent">movies[foundMovieIndex] = movieToUpdateWith;</code>
+            <code class="indent">res.send({ data: movieToUpdateWith });</code>
+            <code>});</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">delete</h3>
+        <p class="snippet_desc"><code>delete</code> is used to delete a resource</p>
+        <div class="codeSnippet">
+            <code>app.delete("/movies/:id", (req, res) => {</code>
+            <code class="indent">const foundMovieIndex = movies.findIndex(movie => movie.id === Number(req.params.id));</code>
+            <code class="indent">movies.splice(foundMovieIndex, 1);</code>
+            <code class="indent">res.send({ });</code>
+            <code>});</code>
+        </div>
+    </div>
+</div>
+

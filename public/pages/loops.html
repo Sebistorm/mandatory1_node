@@ -1,0 +1,41 @@
+<div class="main right">
+    <div class="row">
+        <h1>Mandatory 1 - Loops</h1>
+    </div>
+
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">for</h3>
+        <p class="snippet_desc"><code>for</code> loops through a block of code a number of times. It is overly verbose, error prone since index can run out of bounds and it not functional</p>
+        <div class="codeSnippet">
+            <code>for (let i = let i = 0; i < 5; i++) {</code>
+            <code>// code block to be executed</code>
+            <code>}</code>    
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">forEach</h3>
+        <p class="snippet_desc"><code>forEach</code> calls a function for each element in an array but it won't be executed for empty elements. <code>forEach</code> should be used when there are no need to return a new array</p>
+        <div class="codeSnippet"><code>array.forEach(myFunction);</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">filter()</h3>
+        <p class="snippet_desc"><code>filter()</code> creates a new array filled with elements that pass a test provided by a function. It does not execute the function for empty elements and it does not change the original array.</p>
+        <div class="codeSnippet"><code>const drainedBatteries = carBatteries.filter(battery => battery < 0.5);</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">find()</h3>
+        <p class="snippet_desc"><code>find()</code> returns the value of the first element that passes a test. It executes a function for each array element but not for empty elements. It will return undefined if no elements is found</p>
+        <div class="codeSnippet"><code>const foundMovie = movies.find(movie => movie.id === Number(req.params.id));</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">findIndex()</h3>
+        <p class="snippet_desc"><code>findIndex()</code> returns the index (position) of the first element that passes a test. It returns -1 if no match is found. </p>
+        <div class="codeSnippet"><code>const foundMovieIndex = movies.findIndex(movie => movie.id === Number(req.params.id));</code></div>
+    </div>
+</div>
+

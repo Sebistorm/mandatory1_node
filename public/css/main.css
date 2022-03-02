@@ -36,6 +36,10 @@ code {
     color: var(--lightGreyWhite);
 }
 
+.snippet_desc code {
+    color: #d63384;
+}
+
 .layout {
     display: flex;
 }
@@ -72,9 +76,15 @@ code {
     color: var(--lightGreyWhite);
     padding: 0.8rem;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 .overflow-x-scroll {
     overflow-x: scroll;
     white-space: nowrap;
+}
+
+.indent {
+    margin-left: 2rem;
 }

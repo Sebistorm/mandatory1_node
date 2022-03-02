@@ -1,0 +1,44 @@
+<div class="main right">
+    <div class="row">
+        <h1>Mandatory 1 - App.js file</h1>
+    </div>
+
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">require</h3>
+        <p class="snippet_desc">The <code>require</code> function is the easiest way to include modules that exist in separate files. The basic functionality of <code>require</code> is that it reads a JavaScript file, executes the file, and then proceeds to return the exports object.</p>
+        <div class="codeSnippet overflow-x-scroll">
+            <code>const express = require("express");</code>
+            <code>const app = express();</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">listen</h3>
+        <p class="snippet_desc"><code>listen</code> creates a server that listens on a chosen port of your computer.</p>
+        <div class="codeSnippet">
+            <code>const server = app.listen(8080, () => {</code>
+            <code class="indent">console.log("The server is running on port", server.address().port);</code>
+            <code>});</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">static</h3>
+        <p class="snippet_desc"><code>static</code> serves static assets in Express which means that the client can get access to file type like css, js or html</p>
+        <div class="codeSnippet"><code>app.use(express.static("public"));</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">readFileSync & toString</h3>
+        <p class="snippet_desc"><code>readFileSync</code> is a programming interface of fs module which is used to read the file and return its content. <code>toString</code> makes it a string</p>
+        <div class="codeSnippet"><code>const top = fs.readFileSync("./public/components/top.html").toString();</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">Body Parsing</h3>
+        <p class="snippet_desc"><code>express.json()</code> is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser</p>
+        <div class="codeSnippet"><code>app.use(express.json());</code></div>
+    </div>
+</div>
+
