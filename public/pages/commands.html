@@ -1,0 +1,50 @@
+<div class="main right">
+    <div class="row">
+        <h1>Mandatory 1 - Commands</h1>
+    </div>
+
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">npm install</h3>
+        <p class="snippet_desc"><code>npm install</code> installs a package and any packages that it depends on. If the package has a package-lock, the installation of dependencies will be driven by that. It will install the dependencies to the local <code>node_modules</code> folder</p>
+        <div class="codeSnippet overflow-x-scroll"><code>npm install </code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">npm install <span class="cursive">package_name</span></h3>
+        <p class="snippet_desc"><code>npm install <span class="cursive">package_name</span></code> is used to install a package and add the dependency to the <code>package.json</code> file. The following way is to install <code>Express</code> to the application:</p>
+        <div class="codeSnippet"><code>npm install express</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">npm init</h3>
+        <p class="snippet_desc"><code>npm init</code> creates a package.json file where the name of the project, version, repository, description, etc. can be specified.</p>
+        <div class="codeSnippet"><code>npm init</code></div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">package.json</h3>
+        <p class="snippet_desc"><code>package.json</code> is used to store meta data (name of the project, version etc.), dependencies, etc. The following code is a short version of a package.json file: </p>
+        <div class="codeSnippet">
+            <code>"name": "mandatory_node",</code>
+            <code>"version": "1.0.0",</code>
+            <code>"description": "Mandatory 1 nodejs",</code>
+            <code>"dependencies": {</code>
+            <code class="indent">"express": "^4.17.3"</code>
+            <code>}</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">git commands</h3>
+        <p class="snippet_desc">The most important <code>git commands</code>:</p>
+        <div class="codeSnippet">
+            <code>git clone <span class="cursive">repository url // cloning the repository into the folder</span></code>
+            <code>git add -A <span class="cursive">// adds every files that has changes</span></code>
+            <code>git commit -m "insert message here" <span class="cursive">// makes a commit with a message</span></code>
+            <code>git push <span class="cursive">// pushing all the commits to the remote repository</span></code>
+            <code>git pull <span class="cursive">// pulls the code from the remote repository to the local repository if it detects changes</span></code>
+        </div>
+    </div>
+</div>
+

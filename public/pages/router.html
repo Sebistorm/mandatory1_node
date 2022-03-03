@@ -1,0 +1,27 @@
+<div class="main right">
+    <div class="row">
+        <h1>Mandatory 1 - Router</h1>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">Router</h3>
+        <p class="snippet_desc">The <code>router</code> is used to define the routes then use it in an <code>Express</code> application. The following code shows a basic example of code inside the router file:</p>
+        <div class="codeSnippet overflow-x-scroll">
+            <code>const router = require("express").Router();</code>
+            <code>router.get("/", function (req, res) {</code>
+            <code class="indent">res.send("About this wiki");</code>
+            <code>})</code>
+            <code>module.exports = router;</code>
+        </div>
+    </div>
+
+    <div class="row snippet_wrapper">
+        <h3 class="snippet_title">Using the router file inside app.js</h3>
+        <p class="snippet_desc">Using the <code>route file</code> can be done the following way:</p>
+        <div class="codeSnippet">
+            <code>const wikisRouter = require("./routers/wikisrouter.js");</code>
+            <code>app.use(wikisRouter);</code>
+        </div>
+    </div>
+</div>
+

@@ -1,11 +1,11 @@
 @import url("/css/nav.css");
+@import url("/css/footer.css");
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 :root {
     --darkBlue: #1B2A38;
@@ -49,6 +49,11 @@ code {
     margin-right: 5%;
 }
 
+.sidebar ul {
+    position: sticky;
+    top: 1rem;
+}
+
 .main {
     width: 75%;
 }
@@ -87,4 +92,8 @@ code {
 
 .indent {
     margin-left: 2rem;
+}
+
+.cursive {
+    font-style: italic;
 }
